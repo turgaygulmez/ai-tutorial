@@ -9,6 +9,7 @@
 ### Credits:
 
 - [W3School](https://www.w3schools.com/ai/default.asp)
+- [simplilearn] (https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning)
 
 ## Machine Learning
 
@@ -46,8 +47,21 @@ Yellow nodes are the first perceptrons which is performing a simple decision. On
 
 Deep Neural Networks are another layer in the network that performs even further decision in the network.
 
+### Epoch and Batch in Machine Learning
+
+Each time a dataset passes through an algorithm, it is said to have completed an epoch. Therefore, Epoch, in machine learning, refers to the one entire passing of training data through the algorithm. It's a hyperparameter that determines the process of training the machine learning model.
+
+The training data is always broken down into small batches to overcome the issue that could arise due to storage space limitations of a computer system. These smaller batches can be easily fed into the machine learning model to train it. This process of breaking it down to smaller bits is called batch in machine learning. This procedure is known as an epoch when all the batches are fed into the model to train at once.
+
+An epoch is when all the training data is used at once and is defined as the total number of iterations of all the training data in one cycle for training the machine learning model.
+
+Another way to define an epoch is the number of passes a training dataset takes around an algorithm. One pass is counted when the data set has done both forward and backward passes.
+
+Let's explain Epoch with an example. Consider a dataset that has 200 samples. These samples take 1000 epochs or 1000 turns for the dataset to pass through the model. It has a batch size of 5. This means that the model weights are updated when each of the 40 batches containing five samples passes through. Hence the model will be updated 40 times.
+
 ### Examples
 
 We will be using some JavaScript libraries to hide the complexity of the mathematics in order to use ML and AI. Yet understanding the basics will help to use those libraries.
 
-[How to build a Neural Network with brain.js](./ML/brainjs/app.js)
+- [How to build a Neural Network with brain.js](./ML/brainjs/app.js)
+- [How to build a Neural Network with ml5js](./ML/ml5/app.js)
