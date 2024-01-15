@@ -50,4 +50,4 @@ Deep Neural Networks are another layer in the network that performs even further
 
 We will be using some JavaScript libraries to hide the complexity of the mathematics in order to use ML and AI. Yet understanding the basics will help to use those libraries.
 
-[How to create Neural Network with brain.js](./ML/brainJS)
+[How to build a Neural Network with brain.js](./ML/brainjs/app.js)

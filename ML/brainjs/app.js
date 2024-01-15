@@ -1,3 +1,13 @@
+/**
+ * Possibilities are infinite
+ * - Task: train your network with job groups and their related lessons
+ *    - Ask user to insert what subjects they enjoy most, output what is the potential jobs they can pick up in the future
+ *    - Ex:
+ *        --- math, physics, science, english, history, geography
+ *        lessons: [true, true, true, false, false, false],
+ *        job: { engineering: 1 }
+ */
+
 const network = new brain.NeuralNetwork();
 
 // define your training data
