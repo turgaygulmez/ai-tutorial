@@ -1,9 +1,10 @@
 # Documentation
 
 - [Machine Learning](#machine-learning)
-  - [Basics](#api-calls)
-- [OpenAI](#openai)
-  - [API calls](#api-calls-1)
+  - [Perceptrons](#perceptrons)
+  - [Neural Networks](#neural-networks)
+  - [Deep Neural Networks](#deep-neural-networks)
+  - [Examples](#examples)
 
 ### Credits:
 
