@@ -9,7 +9,7 @@
 ### Credits:
 
 - [W3School](https://www.w3schools.com/ai/default.asp)
-- [simplilearn] (https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning)
+- [Simplilearn](https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning)
 
 ## Machine Learning
 
@@ -33,11 +33,11 @@ In order to understand how ML works, firstly we need to learn how neural network
 
 ### Perceptrons
 
-The Perceptron defines the first step into Neural Networks. It represents a single neuron with only one input layer, and no hidden layers. Consider them as a single node which is responsible to make a single decision.
+The Perceptron defines the first step into Neural Networks. It represents a single neuron with only one input layer, and no hidden layers.
 
 ### Neural Networks
 
-Neural Networks are Multi-Layer Perceptrons. Meaning each node is connected to each other to perform more complex tasks.
+Neural Networks are Multi-Layer Perceptrons. Meaning each neural is connected to each other to perform more complex tasks.
 
 ![image info](https://www.w3schools.com/ai/img_nn_single_600.jpg)
 
@@ -59,7 +59,7 @@ Another way to define an epoch is the number of passes a training dataset takes 
 
 Let's explain Epoch with an example. Consider a dataset that has 200 samples. These samples take 1000 epochs or 1000 turns for the dataset to pass through the model. It has a batch size of 5. This means that the model weights are updated when each of the 40 batches containing five samples passes through. Hence the model will be updated 40 times.
 
-### Examples
+#### Neural Networks Examples
 
 We will be using some JavaScript libraries to hide the complexity of the mathematics in order to use ML and AI. Yet understanding the basics will help to use those libraries.
 
