@@ -59,9 +59,106 @@ Another way to define an epoch is the number of passes a training dataset takes 
 
 Let's explain Epoch with an example. Consider a dataset that has 200 samples. These samples take 1000 epochs or 1000 turns for the dataset to pass through the model. It has a batch size of 5. This means that the model weights are updated when each of the 40 batches containing five samples passes through. Hence the model will be updated 40 times.
 
-#### Neural Networks Examples
+### Neural Networks Examples
 
 We will be using some JavaScript libraries to hide the complexity of the mathematics in order to use ML and AI. Yet understanding the basics will help to use those libraries.
 
 - [How to build a Neural Network with brain.js](./ML/brainjs/app.js)
 - [How to build a Neural Network with ml5js](./ML/ml5/app.js)
+
+## OpenAI
+
+OpenAI is a company that exposes their trained models through Rest API.
+
+The APIs are accessible to public and can be used with pay as you go pricing model.
+
+They also expose a public AI Tool (ChatGPT) which can be used for free. [Try it out!](https://chat.openai.com/)
+
+What models are available on OpenAI?
+
+- GPT-4 is a large multimodal model (accepting text or image inputs and outputting text) that can solve difficult problems
+
+- DALL·E is a model that can generate and edit images given a natural language prompt
+
+- TTS is a set of models that can convert text into natural sounding spoken audio
+
+- Whisper is a model that can convert audio into text
+
+- Moderation is a fine-tuned model that can detect whether text may be sensitive or unsafe
+
+- Embeddings is a set of models that can convert text into a numerical form
+
+Each models are available through APIs that can be used to perform a complex tasks.
+
+They also provide a [Playground](https://platform.openai.com/playground?mode=chat) platform for their chat model with a very simple interface.
+
+### GPT-4
+
+GPT-4 is a model that can perform both chat and completions tasks using the Chat Completions API.
+
+Supported endpoints:
+
+/v1/assistants
+/v1/chat/completions
+
+Local development setup steps:
+
+1. Install node18 or higher
+2. Register on openAI platform
+3. Create API key on [api keys page](https://platform.openai.com/api-keys)
+4. Set an environment variable as "OPENAI_API_KEY" and set the api key you have generated
+5. [Check simple OpenAI example](./OpenAI/example1.js)
+
+The example given above will ask question to OpenAI service "Who was the first president of USA?" and get the right answer once the service resolves our request.
+
+We have not provided any data to OpenAI but yet it has answered our question correctly. The reason behind is, their models are already trained with very large amount of data. But that does not mean OpenAI will answer all the questions you ask to it.
+
+For example if we ask OpenAI,
+
+"What was the weather on 16/01/2024?" [See example](./OpenAI/example2.js)
+
+You will get an answer as such:
+
+"I'm sorry, but as my last update was in March 2023 and I don't have the ability to....."
+
+That is because OpenAI models are trained up until some dates. For instance gpt-4-1106-preview has been trained up till Apr 2023
+
+Click [here](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo) to see all models training dates.
+
+Before we jump into how to resolve this issue, lets first undertand the roles in Chat Completions API.
+
+#### Roles
+
+- User: Defines question
+- System: Defines the system role and behavior
+- Assistant: Defines data or context
+
+#### Using data
+
+There are number of ways to use your own data
+
+**Opt in to store data on OpenAI servers**
+
+Opt in on openai server might be benefitial in case your data is not sensitive.
+
+**Use assistants (endpoint) to store data**
+
+The same thing goes with assistants but assistants endpoint might be pricy. See the [tread](https://community.openai.com/t/assistants-api-pricing-details-per-message/476530?page=2).
+
+**Send data as part of the prompt**
+
+For non-sensitive data, this might be the easiest way to do so. You can simply inject your data as part of your prompts. This can be done by defining data as part of user or assistant
+
+**Use embeedings**
+
+This is one of the most widely used option especially for large data.
+
+Each method has its own advantages and disadvantages. Depending on the project and usecase one can be more benefitical than the other.
+
+Remember our issue with the weather question? Now lets ask OpenAI again the same question but this time we will give some data to openAI through or prompts. See [Example](./OpenAI/example3.js)
+
+### Embeddings
+
+Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text.
+
+/v1/embeddings
