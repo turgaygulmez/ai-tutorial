@@ -10,6 +10,7 @@
 
 - [W3School](https://www.w3schools.com/ai/default.asp)
 - [Simplilearn](https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning)
+- [OpenAI](https://platform.openai.com/docs)
 
 ## Machine Learning
 
@@ -164,8 +165,52 @@ Each method has its own advantages and disadvantages. Depending on the project a
 
 Remember our issue with the weather question? Now lets ask OpenAI again the same question but this time we will give some data to openAI through our prompts. See [Example](./OpenAI/example3.js)
 
+#### Understanding Tokens
+
+Language models read and write text in chunks called tokens. In English, a token can be as short as one character or as long as one word (e.g., a or apple), and in some languages tokens can be even shorter than one character or even longer than one word.
+
+For example, the string "ChatGPT is great!" is encoded into six tokens: ["Chat", "G", "PT", " is", " great", "!"].
+
+The total number of tokens in an API call affects:
+
+How much your API call costs, as you pay per token
+How long your API call takes, as writing more tokens takes more time
+Whether your API call works at all, as total tokens must be below the model’s maximum limit
+
+Use this [link](https://platform.openai.com/tokenizer) to calculate the total token.
+
+Its very important to undertand tokens when dealing with large data.
+
 ### Embeddings
 
-Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text.
+An embedding is a vector representation of a piece of data (e.g. some text) that is meant to preserve aspects of its content and/or its meaning. Chunks of data that are similar in some way will tend to have embeddings that are closer together than unrelated data. OpenAI offers text embedding models that take as input a text string and produce as output an embedding vector. Embeddings are useful for search, clustering, recommendations, anomaly detection, classification, and more. Read more about embeddings in our embeddings guide.
 
 /v1/embeddings
+
+An embedding is a vector (list) of floating point numbers. The distance between two vectors measures their relatedness. Small distances suggest high relatedness and large distances suggest low relatedness.
+
+In a nutshell, the way embeeding works as such
+
+1- First of all identify your data. For example list of customer reviews that contains following structure
+
+```json
+[
+  { "userId": "1234", "content": "The product was amazing!" },
+  { "userId": "2345", "content": "It was a disaster product. I am regretful" }
+]
+```
+
+2- Call open AI embeddings api to get the embeedings for each and every reviews
+3- Store them in a vector database. EX: HNSWLib memory database
+4- Ideally store them in a file system to be able to reuse again
+5- Load your embeedings with HNSWLib and perform actions EX: similaritySearch
+
+There are lots of vector stores which can be used depending on your setup. Below are some of the vector database examples:
+
+Memory Vector Store
+Chroma
+Elasticsearch
+FAISS
+LanceDB
+Milvus
+MongoDB Atlas
