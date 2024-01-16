@@ -191,7 +191,7 @@ An embedding is a vector (list) of floating point numbers. The distance between 
 
 In a nutshell, the way embeeding works as such
 
-1- First of all identify your data. For example list of customer reviews that contains following structure
+1. First of all identify your data. For example list of customer reviews that contains following structure
 
 ```json
 [
@@ -200,10 +200,10 @@ In a nutshell, the way embeeding works as such
 ]
 ```
 
-2- Call open AI embeddings api to get the embeedings for each and every reviews
-3- Store them in a vector database. EX: HNSWLib memory database
-4- Ideally store them in a file system to be able to reuse again
-5- Load your embeedings with HNSWLib and perform actions EX: similaritySearch
+2. Call open AI embeddings api to get the embeedings for each and every reviews
+3. Store them in a vector database. EX: HNSWLib memory database
+4. Ideally store them in a file system to be able to reuse again
+5. Load your embeedings with HNSWLib and perform actions EX: similaritySearch
 
 There are lots of vector stores which can be used depending on your setup. Below are some of the vector database examples:
 
