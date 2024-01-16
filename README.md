@@ -4,7 +4,14 @@
   - [Perceptrons](#perceptrons)
   - [Neural Networks](#neural-networks)
   - [Deep Neural Networks](#deep-neural-networks)
-  - [Examples](#examples)
+  - [Epoch and Batch in Machine Learning](#epoch-and-batch-in-machine-learning)
+  - [Neural Networks Examples](#neural-networks-examples)
+- [OpenAI](#openai)
+  - [GPT-4](#gpt-4)
+    - [Roles](#roles)
+    - [Using data](#using-data)
+    - [Understanding Tokens](#understanding-tokens)
+  - [Embeddings](#embeddings)
 
 ### Credits:
 
