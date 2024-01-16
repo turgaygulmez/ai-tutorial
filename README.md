@@ -207,10 +207,10 @@ In a nutshell, the way embeeding works as such
 
 There are lots of vector stores which can be used depending on your setup. Below are some of the vector database examples:
 
-Memory Vector Store
-Chroma
-Elasticsearch
-FAISS
-LanceDB
-Milvus
-MongoDB Atlas
+- Memory Vector Store
+- Chroma
+- Elasticsearch
+- FAISS
+- LanceDB
+- Milvus
+- MongoDB Atlas
