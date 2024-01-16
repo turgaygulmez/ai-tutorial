@@ -98,8 +98,8 @@ GPT-4 is a model that can perform both chat and completions tasks using the Chat
 
 Supported endpoints:
 
-/v1/assistants
-/v1/chat/completions
+- /v1/assistants
+- /v1/chat/completions
 
 Local development setup steps:
 
@@ -131,7 +131,14 @@ Before we jump into how to resolve this issue, lets first undertand the roles in
 
 - User: Defines question
 - System: Defines the system role and behavior
-- Assistant: Defines data or context
+- Assistant: Models response depends on user question
+
+```json
+{"role": "system", "content": "You are a helpful assistant."},
+{"role": "user", "content": "Knock knock."},
+{"role": "assistant", "content": "Who's there?"},
+{"role": "user", "content": "Orange."}
+```
 
 #### Using data
 
@@ -147,7 +154,7 @@ The same thing goes with assistants but assistants endpoint might be pricy. See 
 
 **Send data as part of the prompt**
 
-For non-sensitive data, this might be the easiest way to do so. You can simply inject your data as part of your prompts. This can be done by defining data as part of user or assistant
+For non-sensitive data, this might be the easiest way to do so. You can simply inject your data as part of your prompts. This can be done by defining data as part of user or system
 
 **Use embeedings**
 
@@ -155,7 +162,7 @@ This is one of the most widely used option especially for large data.
 
 Each method has its own advantages and disadvantages. Depending on the project and usecase one can be more benefitical than the other.
 
-Remember our issue with the weather question? Now lets ask OpenAI again the same question but this time we will give some data to openAI through or prompts. See [Example](./OpenAI/example3.js)
+Remember our issue with the weather question? Now lets ask OpenAI again the same question but this time we will give some data to openAI through our prompts. See [Example](./OpenAI/example3.js)
 
 ### Embeddings
 
