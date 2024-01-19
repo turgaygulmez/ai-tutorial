@@ -12,12 +12,10 @@
     - [Using data](#using-data)
     - [Understanding Tokens](#understanding-tokens)
   - [Embeddings](#embeddings)
-
-### Credits:
-
-- [W3School](https://www.w3schools.com/ai/default.asp)
-- [Simplilearn](https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning)
-- [OpenAI](https://platform.openai.com/docs)
+- [LangChain](#langchain)
+  - [Storing vectors HNSWLib](#storing-vectors-hnswlib)
+  - [Retrieval Chain](#retrieval-chain)
+- [Materials](#materials)
 
 ## Machine Learning
 
@@ -258,8 +256,9 @@ Check [example](./LangChain/example4.js)
 
 Now you have the basics of AI, you can go ahead and expand your knowledge with following links:
 
-### Libraries/Frameworks
-
-### Tutorial
-
-### Tools
+- [Machine Learning Tutorial w3schools](https://www.w3schools.com/ai/default.asp)
+- [AI Tutorials simplilearn](https://www.simplilearn.com/resources/artificial-intelligence-machine-learning)
+- [Free AI Tutorials deeplearning](https://www.deeplearning.ai/)
+- [OpenAI Examples](https://platform.openai.com/examples)
+- [LangChain Documentation](https://js.langchain.com/docs/get_started/introduction)
+- [Vector Search Example](https://www.dawsoncodes.com/posts/11/semantic-search-with-nodejs-and-langchain)
