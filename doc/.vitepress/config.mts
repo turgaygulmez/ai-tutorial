@@ -24,15 +24,28 @@ export default defineConfig({
             items: [
               {
                 text: "Machine Learning",
-                link: "/sections/core/machine-learning/machine-learning",
+                link: "/sections/core/machine-learning",
               },
               {
                 text: "Open AI",
-                link: "/sections/core/open-ai/open-ai",
+                link: "/sections/core/open-ai",
               },
               {
+                text: "Claude",
+                link: "/sections/core/claude",
+              },
+            ],
+          },
+          {
+            text: "Libraries",
+            items: [
+              {
                 text: "LangChain",
-                link: "/sections/core/lang-chain/lang-chain",
+                link: "/sections/libraries/lang-chain",
+              },
+              {
+                text: "Claude Code",
+                link: "/sections/libraries/claude-code",
               },
             ],
           },
