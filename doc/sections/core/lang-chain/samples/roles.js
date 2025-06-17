@@ -1,14 +1,9 @@
-import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { config } from "dotenv";
-
-config();
-
-const chatModel = new ChatOpenAI({
-  openAIApiKey: process.env["OPENAI_API_KEY"],
-});
+import { getChatModel } from "./core.js";
 
 async function main() {
+  const chatModel = getChatModel();
+
   const prompt = ChatPromptTemplate.fromMessages([
     [
       "system",

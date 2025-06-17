@@ -1,0 +1,17 @@
+{
+  "name": "ai-tutorial",
+  "version": "1.0.0",
+  "description": "- [Machine Learning](#machine-learning)   - [Perceptrons](#perceptrons)   - [Neural Networks](#neural-networks)   - [Deep Neural Networks](#deep-neural-networks)   - [Epoch and Batch in Machine Learning](#epoch-and-batch-in-machine-learning)   - [Neural Networks Examples](#neural-networks-examples) - [OpenAI](#openai)   - [GPT-4](#gpt-4)     - [Roles](#roles)     - [Using data](#using-data)     - [Understanding Tokens](#understanding-tokens)   - [Embeddings](#embeddings) - [LangChain](#langchain)   - [Storing vectors HNSWLib](#storing-vectors-hnswlib)   - [Retrieval Chain](#retrieval-chain) - [Materials](#materials)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

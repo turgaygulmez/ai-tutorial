@@ -12,19 +12,19 @@ const network = new brain.NeuralNetwork();
 
 // define your training data
 // index mapping for skills
-// [canSwim, canRun, hasFin, hasLegs, hasTail, canFly]
+// [canSwim, canRun, canJump, canFly]
 
 const animals = [
   {
-    skills: [true, true, false, true, true, false],
+    skills: [true, true, true, false],
     type: { dog: 1 },
   },
   {
-    skills: [true, false, true, false, false, false],
+    skills: [true, false, false, false],
     type: { fish: 1 },
   },
   {
-    skills: [false, false, false, true, true, true],
+    skills: [false, false, false, true],
     type: { bird: 1 },
   },
 ];
@@ -40,14 +40,12 @@ network.train(
 );
 
 // what skills you want in your pet?
-const canSwim = true,
+const canSwim = false,
   canRun = false,
-  hasFin = true,
-  hasLegs = false,
-  hasTail = false,
-  canFly = false;
+  canJump = false,
+  canFly = true;
 
-let result = network.run([canSwim, canRun, hasFin, hasLegs, hasTail, canFly]);
+let result = network.run([canSwim, canRun, canJump, canFly]);
 
 console.log(result);
 

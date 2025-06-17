@@ -1,18 +1,13 @@
-import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { config } from "dotenv";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { HNSWLib } from "@langchain/community/vectorstores/hnswlib";
 import { createRetrievalChain } from "langchain/chains/retrieval";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
-
-config();
-
-const chatModel = new ChatOpenAI({
-  openAIApiKey: process.env["OPENAI_API_KEY"],
-});
+import { getChatModel } from "./core.js";
 
 async function run() {
+  const chatModel = getChatModel();
+
   const embeddings = new OpenAIEmbeddings();
 
   const vectorStore = await HNSWLib.load("./localvector", embeddings);
