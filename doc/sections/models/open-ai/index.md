@@ -2,9 +2,9 @@
 
   - [GPT-4o](#gpt-4o)
     - [Roles](#roles)
-    - [Using data](#using-data)
     - [Understanding Tokens](#understanding-tokens)
   - [Embeddings](#embeddings)
+  - [Training](#training)
 
 
 OpenAI is a company that exposes their trained models through Rest API. The APIs are accessible to public and can be used with pay as you go pricing model. They also expose a public AI Tool (ChatGPT) which can be used for free. [Try it out!](https://chat.openai.com/)
@@ -63,38 +63,7 @@ Before we jump into how to resolve this issue, lets first undertand the roles in
 {"role": "user", "content": "Orange."}
 ```
 
-#### Using data
-
-There are number of ways to use your own data
-
-**Opt in to store data on OpenAI servers**
-
-Opt in on openai server might be benefitial in case your data is not sensitive.
-
-**Use assistants (endpoint) to store data**
-
-The same thing goes with assistants but assistants endpoint might be pricy.
-
-**Send data as part of the prompt**
-
-For non-sensitive data, this might be the easiest way to do so. You can simply inject your data as part of your prompts. This can be done by defining data as part of user or system
-
-See [Example](./samples/weather-v2.js)
-
-**Use embeedings**
-
-This is one of the most widely used option especially for large data. An embedding is a vector (a list of numbers) that represents an input object.
-With embeedings you can find the relavent information and pass it along with your prompt.
-
-
-Each method has its own advantages and disadvantages. Depending on the project and usecase one can be more benefitical than the other.
-
-
 #### Understanding Tokens
-
-Language models read and write text in chunks called tokens. In English, a token can be as short as one character or as long as one word (e.g., a or apple), and in some languages tokens can be even shorter than one character or even longer than one word.
-
-For example, the string "ChatGPT is great!" is encoded into six tokens: ["Chat", "G", "PT", " is", " great", "!"].
 
 The total number of tokens in an API call affects:
 
@@ -104,17 +73,11 @@ Whether your API call works at all, as total tokens must be below the model’s 
 
 Use this [link](https://platform.openai.com/tokenizer) to calculate the total token.
 
-Its very important to undertand tokens when dealing with large data.
-
 ### Embeddings
 
-An embedding is a vector representation of a piece of data (e.g. some text) that is meant to preserve aspects of its content and/or its meaning. Chunks of data that are similar in some way will tend to have embeddings that are closer together than unrelated data. OpenAI offers text embedding models that take as input a text string and produce as output an embedding vector. Embeddings are useful for search, clustering, recommendations, anomaly detection, classification, and more.
+OpenAI offers text embedding models that take as input a text string and produce as output an embedding vector.
 
 /v1/embeddings
-
-An embedding is a vector (list) of floating point numbers. The distance between two vectors measures their relatedness. Small distances suggest high relatedness and large distances suggest low relatedness.
-
-In a nutshell, the way embeeding works as such
 
 1. First of all identify your data. For example list of customer reviews that contains following structure
 
@@ -139,3 +102,36 @@ There are lots of vector stores which can be used depending on your setup. Below
 - LanceDB
 - Milvus
 - MongoDB Atlas
+
+
+### Training
+
+OpenAI’s base models like GPT-4o are pre-trained on large datasets and are powerful out-of-the-box. However, for many applications, you may want to **customize** or **fine-tune** these models to better suit your specific needs or domain. Below are the main ways to train or adapt OpenAI models:
+
+#### 1. Fine-tuning with OpenAI API
+
+OpenAI supports **fine-tuning** on some base models (primarily GPT-3.5 and GPT-4 variants depending on availability). Fine-tuning allows you to train a specialized version of a base model on your own dataset to improve performance on specific tasks.
+
+* **How it works**: You upload a labeled dataset of prompt-completion pairs.
+* **Use case**: Customizing the model to speak in a particular style, domain-specific language, or to better understand your data.
+* **Example**: Fine-tuning a customer support chatbot to use your company’s terminology.
+* **API docs**: [Fine-tuning guide](https://platform.openai.com/docs/guides/fine-tuning)
+
+#### 2. Prompt Engineering / Few-shot Learning
+
+Instead of training the model weights, you can **craft prompts** with examples or instructions that guide the model’s behavior without retraining.
+
+* **How it works**: Provide the model with context or examples in the prompt.
+* **Use case**: Quickly adapting model behavior for new tasks or formatting.
+* **Example**: Provide 3 example questions and answers before asking your actual question.
+* **Advantage**: No training cost or time; instant changes.
+* **Limitation**: Can increase token usage; not as precise as fine-tuning.
+
+#### 3. Using Embeddings for Custom Search or Retrieval-Augmented Generation (RAG)
+
+Rather than training the model itself, you can preprocess your data by converting it into embeddings and use those embeddings to retrieve relevant context during prompts.
+
+* **How it works**: Generate embeddings for your documents and store them in a vector database.
+* **Use case**: Build domain-specific knowledge bases, chatbots, or search engines that augment the model with relevant external knowledge.
+* **Advantage**: No changes to the base model; works well with large datasets.
+* **Example**: A legal document assistant that finds relevant clauses and passes them as context in prompts.
