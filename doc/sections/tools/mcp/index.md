@@ -11,7 +11,25 @@ List of available MCP servers
 
 ## Create your own MCP
 
-TODO
+Create a MCP server using @modelcontextprotocol/sdk
+
+[example](./samples/basic/src/index.ts)
+
+Once MCP is running, add it to your MCP list
+
+```json
+{
+  "mcpServers": {
+    "people": {
+      "command": "node",
+      "args": [
+        "ABSOLUTE_PATH/MCP-sample/build/index.js"
+      ]
+    }
+  }
+}
+```
+
 
 
 

@@ -1,0 +1,19 @@
+{
+  "name": "mcp-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npx tsc && npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "axios": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "typescript": "^5.8.3"
+  }
+}
