@@ -40,8 +40,8 @@ export default defineConfig({
                 link: "/sections/models/open-ai",
               },
               {
-                text: "Claude",
-                link: "/sections/models/claude",
+                text: "Anthropic",
+                link: "/sections/models/anthropic",
               },
             ],
           },
