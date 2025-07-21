@@ -43,6 +43,10 @@ export default defineConfig({
                 text: "Anthropic",
                 link: "/sections/models/anthropic",
               },
+              {
+                text: "Hugging Face",
+                link: "/sections/models/huggingface",
+              },
             ],
           },
           {
@@ -51,6 +55,18 @@ export default defineConfig({
               {
                 text: "LangChain",
                 link: "/sections/libraries/lang-chain",
+              },
+              {
+                text: "TensorFlow",
+                link: "/sections/libraries/tensorflow",
+              },
+              {
+                text: "LlamaNode",
+                link: "/sections/libraries/llama-node",
+              },
+              {
+                text: "ThinkChain",
+                link: "/sections/libraries/thinkchain",
               },
             ],
           },
@@ -64,6 +80,38 @@ export default defineConfig({
               {
                 text: "Running LLMs Locally",
                 link: "/sections/tools/llm-local",
+              },
+              {
+                text: "PIXIU - Financial AI",
+                link: "/sections/tools/pixiu",
+              },
+              {
+                text: "FinGPT - Financial LLM",
+                link: "/sections/tools/fingpt",
+              },
+              {
+                text: "MetaGPT - Multi-Agent Framework",
+                link: "/sections/tools/metagpt",
+              },
+              {
+                text: "Cheshire Cat AI",
+                link: "/sections/tools/cheshire-cat",
+              },
+              {
+                text: "LLaVA - Vision Language Model",
+                link: "/sections/tools/llava",
+              },
+              {
+                text: "Onyx - Enterprise AI Assistant",
+                link: "/sections/tools/onyx",
+              },
+              {
+                text: "DocsGPT - Documentation Assistant",
+                link: "/sections/tools/docsgpt",
+              },
+              {
+                text: "AI Hedge Fund - Intelligent Trading System",
+                link: "/sections/tools/ai-hedge-fund",
               },
               {
                 text: "Model Context Protocol",

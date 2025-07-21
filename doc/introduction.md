@@ -1,5 +1,10 @@
 # Introduction of AI tutorial
 
+## Tutorial Sources
+
+- [Simplilearn - AI & Machine Learning Resources](https://www.simplilearn.com/resources/artificial-intelligence-machine-learning)
+- [DeepLearning.AI](https://www.deeplearning.ai/)
+
 ## Materials
 
 Now you have the basics of AI, you can go ahead and expand your knowledge with following links:
