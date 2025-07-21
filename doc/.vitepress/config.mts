@@ -52,9 +52,22 @@ export default defineConfig({
                 text: "LangChain",
                 link: "/sections/libraries/lang-chain",
               },
+            ],
+          },
+          {
+            text: "Tools",
+            items: [
               {
                 text: "Claude Code",
-                link: "/sections/libraries/claude-code",
+                link: "/sections/tools/claude-code",
+              },
+              {
+                text: "Running LLMs Locally",
+                link: "/sections/tools/llm-local",
+              },
+              {
+                text: "Model Context Protocol",
+                link: "/sections/tools/mcp",
               },
             ],
           },
